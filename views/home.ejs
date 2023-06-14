@@ -1,0 +1,14 @@
+<%-include('partials/header');-%>
+
+
+<h1><%=title%></h1>
+<p><%=homecontent%></p>
+<%lists.forEach(function(el){ %>
+    
+<h2><%=el.title%></h2>
+<p><%=el.content.substring(0,100)%>...<a href="/posts/<%=el.title%>">Read more  </a></p>
+
+    <%})%>
+
+
+<%-include('partials/footer');-%>
